@@ -15,8 +15,7 @@ dependencies = {
     "tsukuyomi"
 }
 build = {
-    type = "command",
-    install_command = "sh install.sh",
+    type = "builtin",
     install = {
         lua = {
             pages = "pages.lua",
