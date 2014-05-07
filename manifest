@@ -50,6 +50,13 @@ repository = {
          }
       }
    },
+   thumbnailer = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    tsukuyomi = {
       ['scm-1'] = {
          {
