@@ -32,3 +32,4 @@ $LUA $MAKEZIP
 git checkout master
 git add index.html manifest* $SPEC
 git commit -m "add $SPEC"
+git rebase master gh-pages
