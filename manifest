@@ -7,5 +7,12 @@ repository = {
             arch = "rockspec"
          }
       }
+   },
+   util = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
    }
 }
