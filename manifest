@@ -8,6 +8,13 @@ repository = {
          }
       }
    },
+   cokqueue = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    geo = {
       ['scm-1'] = {
          {
