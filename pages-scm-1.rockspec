@@ -16,11 +16,9 @@ dependencies = {
 }
 build = {
     type = "builtin",
-    install = {
-        lua = {
-            pages = "pages.lua",
-            ["pages.sandbox"] = "lib/sandbox.lua"
-        }
+    modules = {
+        pages = "pages.lua",
+        ["pages.sandbox"] = "lib/sandbox.lua"
     }
 }
 
