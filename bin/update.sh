@@ -21,6 +21,8 @@ SPEC=$(basename $2)
 SPEC_FILE="$(cd $(dirname $2); pwd)/$SPEC"
 
 cd $REPO
+git checkout master
+
 cp $SPEC_FILE ./ 
 
 echo "update repository $REPO"
@@ -29,7 +31,6 @@ $ROCKS_ADMIN make_manifest .
 # zip manifest files
 $LUA $MAKEZIP
 
-git checkout master
 git add index.html manifest* $SPEC
 git commit -m "add $SPEC"
 git rebase master gh-pages
