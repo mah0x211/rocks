@@ -8,6 +8,13 @@ repository = {
          }
       }
    },
+   buffer = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    coepoll = {
       ['scm-1'] = {
          {
