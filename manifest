@@ -43,6 +43,13 @@ repository = {
          }
       }
    },
+   halo = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    llsocket = {
       ['scm-1'] = {
          {
