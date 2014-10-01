@@ -42,6 +42,11 @@ repository = {
       }
    },
    geo = {
+      ['1.0-0'] = {
+         {
+            arch = "rockspec"
+         }
+      },
       ['scm-1'] = {
          {
             arch = "rockspec"
