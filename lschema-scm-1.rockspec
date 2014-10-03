@@ -5,14 +5,13 @@ source = {
 }
 description = {
     summary = "lua data schema module",
-    detailed = [[]],
     homepage = "https://github.com/mah0x211/lua-lschema", 
     license = "MIT/X11",
     maintainer = "Masatoshi Teruya"
 }
 dependencies = {
     "lua >= 5.1",
-    "lrexlib-pcre",
+    "lrexlib-oniguruma",
     "util",
     "halo",
     "tsukuyomi"
