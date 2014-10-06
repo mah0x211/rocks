@@ -1,5 +1,5 @@
 package = "ddl"
-version = "scm-1"
+version = "1.0-0"
 source = {
     url = "git://github.com/mah0x211/lua-ddl.git",
     tag = "v1.0.0"
