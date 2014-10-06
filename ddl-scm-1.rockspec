@@ -1,7 +1,7 @@
 package = "ddl"
 version = "scm-1"
 source = {
-    url = "https://github.com/mah0x211/lua-ddl.git"
+    url = "git://github.com/mah0x211/lua-ddl.git"
 }
 description = {
     summary = "Lua as a Data Definition Language",
