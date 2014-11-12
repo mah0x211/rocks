@@ -13,7 +13,7 @@ http://mah0x211.github.io/rocks/
 luarocks --from=http://mah0x211.github.io/rocks/ install <module>
 ```
 
-## Setup `~/.luarocks/config.lua` Configuration File
+## Setup Configuration File
 
 please add rocks server url to your `~/.luarocks/config.lua`, if you don't want to use command-line option.
 
@@ -21,7 +21,7 @@ please add rocks server url to your `~/.luarocks/config.lua`, if you don't want 
 rocks_servers = {
     "http://mah0x211.github.io/rocks/",
     -- default rocks server
+    "http://rocks.moonscript.org/",
     "http://luarocks.org/repositories/rocks"
 }
 ```
-
