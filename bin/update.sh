@@ -38,6 +38,13 @@ function updateManifest() {
 function addSpec() {
     local specpath=$1
     local spec=$(basename $1)
+    local msg
+    
+    if ! [ -f "$spec" ]; then
+        msg="$spec has been added."
+    else
+        msg="$spec has been updated."
+    fi
     
     if ! [ -f "$specpath" ]; then
         echo "rockspec $specpath not found."
@@ -48,7 +55,7 @@ function addSpec() {
     cd $REPO
     git checkout master
     cp $SPEC_FILE ./
-    updateManifest "$spec has been added"
+    updateManifest "$msg"
 }
 
 
