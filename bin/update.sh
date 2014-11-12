@@ -22,8 +22,9 @@ REPO=$(cd $1; pwd)
 
 
 function updateManifest() {
-    local spec=$1
-    local msg=$2
+    local msg=$1
+    local spec=$2
+    
     echo "update repository $REPO"
     # create manifest
     $ROCKS_ADMIN make_manifest .
@@ -56,7 +57,7 @@ function addSpec() {
     cd $REPO
     git checkout master
     cp $specpath ./
-    updateManifest $spec "$msg"
+    updateManifest "$msg" $spec
 }
 
 
@@ -70,7 +71,7 @@ function delSpec() {
     
     git checkout master
     git rm $spec
-    updateManifest $spec "$spec has been removed"
+    updateManifest "$spec has been removed"
 }
 
 
