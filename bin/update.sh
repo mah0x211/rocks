@@ -60,7 +60,7 @@ function delSpec() {
         printUsage
     fi
     git checkout master
-    rm $spec
+    git rm $spec
     updateManifest "$spec has been removed"
 }
 
