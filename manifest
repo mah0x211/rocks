@@ -50,6 +50,13 @@ repository = {
          }
       }
    },
+   etcd = {
+      ['0.9.0-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    geo = {
       ['1.0-0'] = {
          {
