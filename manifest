@@ -27,6 +27,13 @@ repository = {
          }
       }
    },
+   ['cache-resty-dict'] = {
+      ['1.0.0-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['cache-resty-redis'] = {
       ['1.0-0'] = {
          {
