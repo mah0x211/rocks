@@ -27,6 +27,13 @@ repository = {
          }
       }
    },
+   ['cache-etcd'] = {
+      ['1.0.0-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['cache-resty-dict'] = {
       ['1.0.0-1'] = {
          {
