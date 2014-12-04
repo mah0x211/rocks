@@ -62,13 +62,6 @@ repository = {
          }
       }
    },
-   ddl = {
-      ['1.0-0'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    etcd = {
       ['0.10.0-1'] = {
          {
