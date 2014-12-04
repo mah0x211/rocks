@@ -171,13 +171,6 @@ repository = {
          }
       }
    },
-   ['ossp-uuid'] = {
-      ['1.0-0'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    pages = {
       ['1.0-0'] = {
          {
