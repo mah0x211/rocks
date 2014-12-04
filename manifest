@@ -200,13 +200,6 @@ repository = {
          }
       }
    },
-   path = {
-      ['1.0-0'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    process = {
       ['1.0-0'] = {
          {
