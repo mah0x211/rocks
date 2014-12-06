@@ -114,6 +114,13 @@ repository = {
          }
       }
    },
+   hex = {
+      ['1.0.0-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    httpcli = {
       ['1.1.1-1'] = {
          {
