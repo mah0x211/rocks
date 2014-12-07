@@ -50,6 +50,13 @@ repository = {
          }
       }
    },
+   codec = {
+      ['1.0.0-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    coevent = {
       ['scm-1'] = {
          {
