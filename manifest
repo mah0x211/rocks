@@ -95,6 +95,13 @@ repository = {
          }
       }
    },
+   etcd = {
+      ['0.12.0-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ['etcd-resty'] = {
       ['1.0.0-1'] = {
          {
