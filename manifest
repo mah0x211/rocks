@@ -285,6 +285,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ['1.3.2-1'] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    xxhash = {
