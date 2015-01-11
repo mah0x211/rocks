@@ -165,13 +165,6 @@ repository = {
          }
       }
    },
-   llsocket = {
-      ['scm-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    lschema = {
       ['1.3.0-1'] = {
          {
