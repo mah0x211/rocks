@@ -172,6 +172,13 @@ repository = {
          }
       }
    },
+   lschema = {
+      ['1.3.1-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    magic = {
       ['1.0.0-1'] = {
          {
