@@ -144,6 +144,13 @@ repository = {
          }
       }
    },
+   ['httpcli-resty'] = {
+      ['1.1.0-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    httpconsts = {
       ['1.0.1-1'] = {
          {
