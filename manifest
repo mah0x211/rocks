@@ -78,13 +78,6 @@ repository = {
          }
       }
    },
-   cookie = {
-      ['1.1.2-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    ddl = {
       ['1.0.1-1'] = {
          {
