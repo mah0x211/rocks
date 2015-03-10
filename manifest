@@ -277,6 +277,13 @@ repository = {
          }
       }
    },
+   router = {
+      ['scm-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    session = {
       ['1.1.1-1'] = {
          {
