@@ -99,6 +99,13 @@ repository = {
          }
       }
    },
+   dropbox = {
+      ['0.1.0-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    etcd = {
       ['0.12.0-1'] = {
          {
