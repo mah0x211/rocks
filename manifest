@@ -291,6 +291,13 @@ repository = {
          }
       }
    },
+   session = {
+      ['1.2.0-1'] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    signal = {
       ['1.0.0-1'] = {
          {
