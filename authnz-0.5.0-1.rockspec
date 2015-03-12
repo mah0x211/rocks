@@ -28,13 +28,13 @@ dependencies = {
 build = {
     type = "builtin",
     modules = {
-        authnz                          = "authnz.lua",
-        ["authnz.util"]                 = "lib/util.lua",
-        ["authnz.openidc"]              = "lib/openidc.lua",
-        ["authnz.google"]               = "openidc/google.lua",
-        ["authnz.oauth2"]               = "lib/oauth2.lua",
-        ["authnz.dropbox"]              = "oauth2/dropbox.lua",
-        ["authnz.client.dropbox"]       = "client/dropbox.lua",
+        authnz                      = "authnz.lua",
+        ["authnz.util"]             = "lib/util.lua",
+        ["authnz.openidc"]          = "lib/openidc.lua",
+        ["authnz.google"]           = "openidc/google.lua",
+        ["authnz.oauth2"]           = "lib/oauth2.lua",
+        ["authnz.dropbox"]          = "oauth2/dropbox.lua",
+        ["authnz.digitalocean"]     = "oauth2/digitalocean.lua"
     }
 }
 
