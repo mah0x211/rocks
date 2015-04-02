@@ -287,13 +287,6 @@ repository = {
          }
       }
    },
-   ['resty-entity'] = {
-      ['1.3.0-1'] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    rfcvalid = {
       ['0.1.1-1'] = {
          {
