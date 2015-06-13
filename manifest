@@ -275,6 +275,13 @@ repository = {
          }
       }
    },
+   picohttpparser = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    process = {
       ["1.4.2-1"] = {
          {
