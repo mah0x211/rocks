@@ -1,7 +1,7 @@
 package = "usher"
 version = "scm-1"
 source = {
-    url = "git://github.com/mah0x211/lua-usher.git"
+    url = "gitrec://github.com/mah0x211/lua-usher.git"
 }
 description = {
     summary = "libusher bindings for lua",
