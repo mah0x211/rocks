@@ -10,25 +10,20 @@ description = {
     maintainer = "Masatoshi Teruya"
 }
 dependencies = {
-    "lua >= 5.1"
-}
-external_dependencies = {
-    USHER = {
-        header = "usher.h",
-        library = "usher"
-    }
+    "lua >= 5.1",
+    "luarocks-fetch-gitrec >= 0.2"
 }
 build = {
     type = "builtin",
     modules = {
         usher = {
-            sources = { "src/usher.c" },
-            libraries = { "usher" },
-            incdirs = { 
-                "$(USHER_INCDIR)"
+            sources = {
+                "src/usher.c",
+                "deps/libusher/src/usher.c",
+                "deps/libusher/src/segment.c"
             },
-            libdirs = {
-                "$(USHER_LIBDIR)"
+            incdirs = { 
+                "deps/libusher/src"
             }
         }
     }
