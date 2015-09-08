@@ -321,13 +321,6 @@ repository = {
          }
       }
    },
-   rootdir = {
-      ["1.0.0-1"] = {
-         {
-            arch = "rockspec"
-         }
-      }
-   },
    router = {
       ["scm-1"] = {
          {
