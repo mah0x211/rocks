@@ -399,11 +399,6 @@ repository = {
       }
    },
    util = {
-      ["1.4.1-1"] = {
-         {
-            arch = "rockspec"
-         }
-      },
       ["1.5.0-1"] = {
          {
             arch = "rockspec"
