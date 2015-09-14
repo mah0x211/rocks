@@ -370,6 +370,13 @@ repository = {
          }
       }
    },
+   transpiler = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    tsukuyomi = {
       ["1.0.1-1"] = {
          {
