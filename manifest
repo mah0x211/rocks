@@ -217,11 +217,6 @@ repository = {
       }
    },
    lschema = {
-      ["1.4.0-1"] = {
-         {
-            arch = "rockspec"
-         }
-      },
       ["1.4.1-1"] = {
          {
             arch = "rockspec"
