@@ -216,6 +216,13 @@ repository = {
          }
       }
    },
+   lschema = {
+      ["1.5.0-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ["lua-cjson"] = {
       ["2.1.0-1"] = {
          {
