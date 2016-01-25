@@ -242,6 +242,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["5.25-1"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    mediatypes = {
