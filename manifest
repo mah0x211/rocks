@@ -72,6 +72,13 @@ repository = {
          }
       }
    },
+   ["cache-resty-memcached"] = {
+      ["0.1.0-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ["cache-resty-redis"] = {
       ["1.1.1-1"] = {
          {
