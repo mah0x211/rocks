@@ -1,7 +1,7 @@
 package = "vardir"
 version = "0.1.0-1"
 source = {
-    url = "https://github.com/mah0x211/lua-vardir.git",
+    url = "git://github.com/mah0x211/lua-vardir.git",
     tag = "v0.1.0"
 }
 description = {
