@@ -24,7 +24,7 @@ REPO=$(cd $1; pwd)
 function updateManifest() {
     local msg=$1
     local spec=$2
-    
+
     echo "update repository $REPO"
     # create manifest
     $ROCKS_ADMIN make_manifest .
@@ -33,7 +33,7 @@ function updateManifest() {
 
     git add index.html manifest* $spec
     git commit -m "$msg"
-    git rebase master gh-pages
+    git rebase gh-pages
 }
 
 
@@ -41,21 +41,21 @@ function addSpec() {
     local specpath=$1
     local spec=$(basename $1)
     local msg
-    
+
     if ! [ -f "$spec" ]; then
         msg="$spec has been added."
     else
         msg="$spec has been updated."
     fi
-    
+
     if ! [ -f "$specpath" ]; then
         echo "rockspec $specpath not found."
         printUsage
     fi
     specpath="$(cd $(dirname $specpath); pwd)/$spec"
-    
+
     cd $REPO
-    git checkout master
+    git checkout gh-pages
     cp $specpath ./
     updateManifest "$msg" $spec
 }
@@ -63,13 +63,13 @@ function addSpec() {
 
 function delSpec() {
     local spec=$(basename $1)
-    
+
     if ! [ -f "$spec" ]; then
         echo "rockspec $spec not found."
         printUsage
     fi
-    
-    git checkout master
+
+    git checkout gh-pages
     git rm $spec
     updateManifest "$spec has been removed"
 }
