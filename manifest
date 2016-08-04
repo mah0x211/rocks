@@ -303,6 +303,13 @@ repository = {
          }
       }
    },
+   libtls = {
+      ["2.4.2-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    llsocket = {
       ["0.1.0-1"] = {
          {
