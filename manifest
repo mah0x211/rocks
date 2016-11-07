@@ -483,6 +483,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["1.0.5-1"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    picohttpparser = {
