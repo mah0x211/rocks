@@ -746,6 +746,13 @@ repository = {
          }
       }
    },
+   vips = {
+      ["scm-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    writelog = {
       ["0.1.0-1"] = {
          {
