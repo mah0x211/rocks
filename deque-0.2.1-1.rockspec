@@ -1,7 +1,7 @@
 package = "deque"
 version = "0.2.1-1"
 source = {
-    url = "git://github.com/mah0x211/lua-deque.git",
+    url = "gitrec://github.com/mah0x211/lua-deque.git",
     tag = "v0.2.1"
 }
 description = {
@@ -12,6 +12,7 @@ description = {
 }
 dependencies = {
     "lua >= 5.1",
+    "luarocks-fetch-gitrec >= 0.2"
 }
 build = {
     type = "builtin",
