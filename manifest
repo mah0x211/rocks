@@ -434,6 +434,13 @@ repository = {
          }
       }
    },
+   minheap = {
+      ["0.1.0-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    msgbus = {
       ["scm-1"] = {
          {
