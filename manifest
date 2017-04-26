@@ -402,8 +402,7 @@ repository = {
       ["2.1.0-1"] = {
          {
             arch = "rockspec"
-         },
-         {
+         }, {
             arch = "src"
          }
       }
@@ -520,6 +519,11 @@ repository = {
          }
       },
       ["0.8.1-1"] = {
+         {
+            arch = "rockspec"
+         }
+      },
+      ["0.9.0-1"] = {
          {
             arch = "rockspec"
          }
