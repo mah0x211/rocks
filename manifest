@@ -1125,6 +1125,13 @@ repository = {
          }
       }
    },
+   tointeger = {
+      ["0.1.0-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    transpiler = {
       ["scm-1"] = {
          {
