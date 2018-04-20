@@ -16,6 +16,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["0.7.2-1"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    argv = {
