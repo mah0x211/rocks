@@ -955,6 +955,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["1.8.0-1"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    reco = {
