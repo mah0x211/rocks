@@ -514,6 +514,11 @@ repository = {
          {
             arch = "rockspec"
          }
+      },
+      ["2.7.3-2"] = {
+         {
+            arch = "rockspec"
+         }
       }
    },
    llsocket = {
