@@ -1399,6 +1399,13 @@ repository = {
          }
       }
    },
+   sync = {
+      ["0.1.1-1"] = {
+         {
+            arch = "rockspec"
+         }
+      }
+   },
    ["table-flatten"] = {
       ["0.1.0-1"] = {
          {
