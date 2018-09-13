@@ -6,7 +6,7 @@ source = {
 }
 description = {
     summary = "double-ended queue",
-    homepage = "https://github.com/mah0x211/lua-coop",
+    homepage = "https://github.com/mah0x211/lua-deque",
     license = "MIT/X11",
     maintainer = "Masatoshi Teruya"
 }
