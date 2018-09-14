@@ -1,12 +1,12 @@
-package = "deque"
-version = "0.3.3-1"
+package = "deq"
+version = "0.3.0-1"
 source = {
-    url = "gitrec://github.com/mah0x211/lua-deque.git",
-    tag = "v0.3.3"
+    url = "gitrec://github.com/mah0x211/lua-deq.git",
+    tag = "v0.3.0"
 }
 description = {
     summary = "double-ended queue",
-    homepage = "https://github.com/mah0x211/lua-deque",
+    homepage = "https://github.com/mah0x211/lua-deq",
     license = "MIT/X11",
     maintainer = "Masatoshi Teruya"
 }
@@ -17,12 +17,12 @@ dependencies = {
 build = {
     type = "builtin",
     modules = {
-        deque = {
+        deq = {
             incdirs = {
                 "deps/lauxhlib"
             },
             sources = {
-                "src/deque.c"
+                "src/deq.c"
             }
         }
     }
