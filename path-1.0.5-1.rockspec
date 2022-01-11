@@ -1,7 +1,7 @@
 package = "path"
 version = "1.0.5-1"
 source = {
-    url = "git://github.com/mah0x211/lua-path.git",
+    url = "git+https://github.com/mah0x211/lua-path.git",
     tag = "v1.0.5"
 }
 description = {

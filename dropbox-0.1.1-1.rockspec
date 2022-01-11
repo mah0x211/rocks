@@ -1,7 +1,7 @@
 package = "dropbox"
 version = "0.1.1-1"
 source = {
-    url = "git://github.com/mah0x211/lua-dropbox.git",
+    url = "git+https://github.com/mah0x211/lua-dropbox.git",
     tag = "v0.1.1"
 }
 description = {

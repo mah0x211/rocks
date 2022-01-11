@@ -1,7 +1,7 @@
 package = "loadchunk"
 version = "0.1.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-loadchunk.git",
+    url = "git+https://github.com/mah0x211/lua-loadchunk.git",
     tag = "v0.1.0"
 }
 description = {

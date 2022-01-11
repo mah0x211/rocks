@@ -1,7 +1,7 @@
 package = "cache-resty-redis"
 version = "1.1.1-1"
 source = {
-    url = "git://github.com/mah0x211/lua-cache-resty-redis.git",
+    url = "git+https://github.com/mah0x211/lua-cache-resty-redis.git",
     tag = "v1.1.1"
 }
 description = {

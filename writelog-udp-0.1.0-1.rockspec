@@ -1,7 +1,7 @@
 package = "writelog-udp"
 version = "0.1.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-writelog-udp.git",
+    url = "git+https://github.com/mah0x211/lua-writelog-udp.git",
     tag = "v0.1.0"
 }
 description = {

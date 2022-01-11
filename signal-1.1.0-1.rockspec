@@ -1,7 +1,7 @@
 package = "signal"
 version = "1.1.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-signal.git",
+    url = "git+https://github.com/mah0x211/lua-signal.git",
     tag = "v1.1.0"
 }
 description = {

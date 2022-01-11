@@ -1,7 +1,7 @@
 package = "string-split"
 version = "0.1.1-1"
 source = {
-    url = "git://github.com/mah0x211/lua-string-split.git",
+    url = "git+https://github.com/mah0x211/lua-string-split.git",
     tag = "v0.1.1"
 }
 description = {

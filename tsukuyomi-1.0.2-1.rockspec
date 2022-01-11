@@ -1,7 +1,7 @@
 package = "tsukuyomi"
 version = "1.0.2-1"
 source = {
-    url = "git://github.com/mah0x211/tsukuyomi.git",
+    url = "git+https://github.com/mah0x211/tsukuyomi.git",
     tag = "v1.0.2"
 }
 description = {

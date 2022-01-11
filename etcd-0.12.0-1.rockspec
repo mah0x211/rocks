@@ -1,7 +1,7 @@
 package = "etcd"
 version = "0.12.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-etcd.git",
+    url = "git+https://github.com/mah0x211/lua-etcd.git",
     tag = "v0.12.0"
 }
 description = {

@@ -1,7 +1,7 @@
 package = "table-flatten"
 version = "0.2.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-table-flatten.git",
+    url = "git+https://github.com/mah0x211/lua-table-flatten.git",
     tag = "v0.2.0"
 }
 description = {

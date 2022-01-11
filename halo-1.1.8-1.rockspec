@@ -1,7 +1,7 @@
 package = "halo"
 version = "1.1.8-1"
 source = {
-    url = "git://github.com/mah0x211/lua-halo.git",
+    url = "git+https://github.com/mah0x211/lua-halo.git",
     tag = "v1.1.8"
 }
 description = {

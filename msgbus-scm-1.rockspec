@@ -1,7 +1,7 @@
 package = "msgbus"
 version = "scm-1"
 source = {
-    url = "git://github.com/mah0x211/lua-msgbus.git"
+    url = "git+https://github.com/mah0x211/lua-msgbus.git"
 }
 description = {
     summary = "message-bus module",

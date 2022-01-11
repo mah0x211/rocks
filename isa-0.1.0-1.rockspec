@@ -1,7 +1,7 @@
 package = "isa"
 version = "0.1.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-isa.git",
+    url = "git+https://github.com/mah0x211/lua-isa.git",
     tag = "v0.1.0"
 }
 description = {

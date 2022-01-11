@@ -1,7 +1,7 @@
 package = "authnz"
 version = "0.5.1-1"
 source = {
-    url = "git://github.com/mah0x211/lua-authnz.git",
+    url = "git+https://github.com/mah0x211/lua-authnz.git",
     tag = "v0.5.1"
 }
 description = {

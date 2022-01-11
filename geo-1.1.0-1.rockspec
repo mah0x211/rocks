@@ -1,7 +1,7 @@
 package = "geo"
 version = "1.1.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-geo.git",
+    url = "git+https://github.com/mah0x211/lua-geo.git",
     tag = "v1.1.0"
 }
 description = {

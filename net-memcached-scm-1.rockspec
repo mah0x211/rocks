@@ -1,7 +1,7 @@
 package = "net-memcached"
 version = "scm-1"
 source = {
-    url = "git://github.com/mah0x211/lua-net-memcached.git"
+    url = "git+https://github.com/mah0x211/lua-net-memcached.git"
 }
 description = {
     summary = "memcached client module",

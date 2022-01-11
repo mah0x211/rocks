@@ -1,7 +1,7 @@
 package = "hex"
 version = "1.0.2-1"
 source = {
-    url = "git://github.com/mah0x211/lua-hex.git",
+    url = "git+https://github.com/mah0x211/lua-hex.git",
     tag = "v1.0.2"
 }
 description = {

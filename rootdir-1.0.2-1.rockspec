@@ -1,7 +1,7 @@
 package = "rootdir"
 version = "1.0.2-1"
 source = {
-    url = "git://github.com/mah0x211/lua-rootdir.git",
+    url = "git+https://github.com/mah0x211/lua-rootdir.git",
     tag = "v1.0.2"
 }
 description = {

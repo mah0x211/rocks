@@ -1,7 +1,7 @@
 package = "httpcli"
 version = "1.3.4-1"
 source = {
-    url = "git://github.com/mah0x211/lua-httpcli.git",
+    url = "git+https://github.com/mah0x211/lua-httpcli.git",
     tag = "v1.3.4"
 }
 description = {

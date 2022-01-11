@@ -1,7 +1,7 @@
 package = "regex"
 version = "0.1.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-regex.git",
+    url = "git+https://github.com/mah0x211/lua-regex.git",
     tag = "v0.1.0"
 }
 description = {
