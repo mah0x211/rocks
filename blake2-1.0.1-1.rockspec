@@ -1,7 +1,7 @@
 package = "blake2"
 version = "1.0.1-1"
 source = {
-    url = "git://github.com/mah0x211/lua-blake2.git",
+    url = "git+https://github.com/mah0x211/lua-blake2.git",
     tag = "v1.0.1"
 }
 description = {

@@ -1,7 +1,7 @@
 package = "jsonrpc-parser"
 version = "scm-1"
 source = {
-    url = "git://github.com/mah0x211/lua-jsonrpc-parser.git"
+    url = "git+https://github.com/mah0x211/lua-jsonrpc-parser.git"
 }
 description = {
     summary = "JSON-RPC 2.0 Message Parser",

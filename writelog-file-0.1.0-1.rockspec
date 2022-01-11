@@ -1,7 +1,7 @@
 package = "writelog-file"
 version = "0.1.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-writelog-file.git",
+    url = "git+https://github.com/mah0x211/lua-writelog-file.git",
     tag = "v0.1.0"
 }
 description = {

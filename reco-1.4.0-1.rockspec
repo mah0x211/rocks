@@ -1,7 +1,7 @@
 package = "reco"
 version = "1.4.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-reco.git",
+    url = "git+https://github.com/mah0x211/lua-reco.git",
     tag = "v1.4.0"
 }
 description = {

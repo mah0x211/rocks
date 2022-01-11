@@ -1,7 +1,7 @@
 package = "resty-entity"
 version = "1.3.3-1"
 source = {
-    url = "git://github.com/mah0x211/lua-resty-entity.git",
+    url = "git+https://github.com/mah0x211/lua-resty-entity.git",
     tag = "v1.3.3"
 }
 description = {

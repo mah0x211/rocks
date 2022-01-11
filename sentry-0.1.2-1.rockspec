@@ -1,7 +1,7 @@
 package = "sentry"
 version = "0.1.2-1"
 source = {
-    url = "git://github.com/mah0x211/lua-sentry.git",
+    url = "git+https://github.com/mah0x211/lua-sentry.git",
     tag = "v0.1.2"
 }
 description = {

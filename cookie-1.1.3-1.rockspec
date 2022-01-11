@@ -1,7 +1,7 @@
 package = "cookie"
 version = "1.1.3-1"
 source = {
-    url = "git://github.com/mah0x211/lua-cookie.git",
+    url = "git+https://github.com/mah0x211/lua-cookie.git",
     tag = "v1.1.3"
 }
 description = {

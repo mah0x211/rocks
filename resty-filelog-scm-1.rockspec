@@ -1,7 +1,7 @@
 package = "resty-filelog"
 version = "scm-1"
 source = {
-    url = "git://github.com/mah0x211/lua-resty-filelog.git"
+    url = "git+https://github.com/mah0x211/lua-resty-filelog.git"
 }
 description = {
     summary = "",

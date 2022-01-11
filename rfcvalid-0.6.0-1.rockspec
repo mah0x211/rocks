@@ -1,7 +1,7 @@
 package = "rfcvalid"
 version = "0.6.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-rfcvalid.git",
+    url = "git+https://github.com/mah0x211/lua-rfcvalid.git",
     tag = "v0.6.0"
 }
 description = {

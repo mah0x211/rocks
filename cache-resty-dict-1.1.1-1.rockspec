@@ -1,7 +1,7 @@
 package = "cache-resty-dict"
 version = "1.1.1-1"
 source = {
-    url = "git://github.com/mah0x211/lua-cache-resty-dict.git",
+    url = "git+https://github.com/mah0x211/lua-cache-resty-dict.git",
     tag = "v1.1.1"
 }
 description = {

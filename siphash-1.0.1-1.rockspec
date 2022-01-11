@@ -1,7 +1,7 @@
 package = "siphash"
 version = "1.0.1-1"
 source = {
-    url = "git://github.com/mah0x211/lua-siphash.git",
+    url = "git+https://github.com/mah0x211/lua-siphash.git",
     tag = "v1.0.1"
 }
 description = {

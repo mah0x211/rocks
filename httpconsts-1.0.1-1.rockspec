@@ -1,7 +1,7 @@
 package = "httpconsts"
 version = "1.0.1-1"
 source = {
-    url = "git://github.com/mah0x211/lua-httpconsts.git",
+    url = "git+https://github.com/mah0x211/lua-httpconsts.git",
     tag = "v1.0.1"
 }
 description = {

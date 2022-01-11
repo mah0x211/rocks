@@ -1,7 +1,7 @@
 package = "httpcli-resty"
 version = "1.2.2-1"
 source = {
-    url = "git://github.com/mah0x211/lua-httpcli-resty.git",
+    url = "git+https://github.com/mah0x211/lua-httpcli-resty.git",
     tag = "v1.2.2"
 }
 description = {

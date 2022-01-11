@@ -1,7 +1,7 @@
 package = "parcel"
 version = "0.1.1-1"
 source = {
-    url = "git://github.com/mah0x211/lua-parcel.git",
+    url = "git+https://github.com/mah0x211/lua-parcel.git",
     tag = "v0.1.1"
 }
 description = {

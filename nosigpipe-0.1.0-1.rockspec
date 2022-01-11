@@ -1,7 +1,7 @@
 package = "nosigpipe"
 version = "0.1.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-nosigpipe.git",
+    url = "git+https://github.com/mah0x211/lua-nosigpipe.git",
     tag = "v0.1.0"
 }
 description = {

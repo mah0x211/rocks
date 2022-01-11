@@ -1,7 +1,7 @@
 package = "notifier"
 version = "1.1.2-1"
 source = {
-    url = "git://github.com/mah0x211/lua-notifier.git",
+    url = "git+https://github.com/mah0x211/lua-notifier.git",
     tag = "v1.1.2"
 }
 description = {

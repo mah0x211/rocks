@@ -1,7 +1,7 @@
 package = "writelog-tcp"
 version = "0.1.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-writelog-tcp.git",
+    url = "git+https://github.com/mah0x211/lua-writelog-tcp.git",
     tag = "v0.1.0"
 }
 description = {

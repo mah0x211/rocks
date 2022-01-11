@@ -1,7 +1,7 @@
 package = "mediatypes"
 version = "2.0.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-mediatypes.git",
+    url = "git+https://github.com/mah0x211/lua-mediatypes.git",
     tag = "v2.0.0"
 }
 description = {

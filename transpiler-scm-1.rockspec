@@ -1,7 +1,7 @@
 package = "transpiler"
 version = "scm-1"
 source = {
-    url = "git://github.com/mah0x211/lua-transpiler.git"
+    url = "git+https://github.com/mah0x211/lua-transpiler.git"
 }
 description = {
     summary = "url transpiler",

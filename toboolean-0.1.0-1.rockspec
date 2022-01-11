@@ -1,7 +1,7 @@
 package = "toboolean"
 version = "0.1.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-toboolean.git",
+    url = "git+https://github.com/mah0x211/lua-toboolean.git",
     tag = "v0.1.0"
 }
 description = {

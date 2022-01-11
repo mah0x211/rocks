@@ -2,7 +2,7 @@ package = "lua-cjson"
 version = "2.1.0-1"
 
 source = {
-    url = "git://github.com/mah0x211/lua-cjson.git",
+    url = "git+https://github.com/mah0x211/lua-cjson.git",
     branch = "decode_null_option"
 }
 

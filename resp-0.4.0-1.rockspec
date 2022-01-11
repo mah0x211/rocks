@@ -1,7 +1,7 @@
 package = "resp"
 version = "0.4.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-resp.git",
+    url = "git+https://github.com/mah0x211/lua-resp.git",
     tag = "v0.4.0"
 }
 description = {

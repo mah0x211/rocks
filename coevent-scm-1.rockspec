@@ -1,7 +1,7 @@
 package = "coevent"
 version = "scm-1"
 source = {
-    url = "git://github.com/mah0x211/lua-coevent.git"
+    url = "git+https://github.com/mah0x211/lua-coevent.git"
 }
 description = {
     summary = "kqueue/epoll event module",

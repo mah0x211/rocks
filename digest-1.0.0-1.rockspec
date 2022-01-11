@@ -1,7 +1,7 @@
 package = "digest"
 version = "1.0.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-digest.git",
+    url = "git+https://github.com/mah0x211/lua-digest.git",
     tag = "v1.0.0"
 }
 description = {

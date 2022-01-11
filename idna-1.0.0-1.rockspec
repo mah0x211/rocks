@@ -1,7 +1,7 @@
 package = "idna"
 version = "1.0.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-idna.git",
+    url = "git+https://github.com/mah0x211/lua-idna.git",
     tag = "v1.0.0"
 }
 description = {

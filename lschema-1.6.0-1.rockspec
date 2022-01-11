@@ -1,7 +1,7 @@
 package = "lschema"
 version = "1.6.0-1"
 source = {
-    url = "git://github.com/mah0x211/lua-lschema.git",
+    url = "git+https://github.com/mah0x211/lua-lschema.git",
     tag = "v1.6.0"
 }
 description = {

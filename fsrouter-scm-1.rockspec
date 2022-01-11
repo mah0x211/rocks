@@ -1,7 +1,7 @@
 package = "fsrouter"
 version = "scm-1"
 source = {
-    url = "git://github.com/mah0x211/lua-fsrouter.git"
+    url = "git+https://github.com/mah0x211/lua-fsrouter.git"
 }
 description = {
     summary = "filesystem based url router",
