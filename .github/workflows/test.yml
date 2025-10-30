@@ -1,0 +1,61 @@
+name: Test
+
+on:
+    push:
+        branches-ignore:
+            - gh-pages
+        paths-ignore:
+            - "**/*.md"
+    pull_request:
+        branches-ignore:
+            - gh-pages
+        paths-ignore:
+            - "**/*.md"
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [24.x]
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Install system dependencies
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y lua5.4 luarocks git sqlite3 curl zip
+                  # Verify installations
+                  echo "Node.js version: $(node --version)"
+                  echo "Lua version: $(lua -v)"
+                  echo "LuaRocks version: $(luarocks --version)"
+                  echo "Git version: $(git --version)"
+                  echo "SQLite version: $(sqlite3 --version)"
+                  echo "Zip version: $(zip --version)"
+
+            - name: Setup Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: "npm"
+
+            - name: Run tests
+              run: npm test
+
+            - name: Generate coverage report
+              run: |
+                  npm run test:coverage:lcov
+                  echo "## Coverage Report" >> $GITHUB_STEP_SUMMARY
+                  echo "- **Coverage**: LCOV report generated (lcov.info)" >> $GITHUB_STEP_SUMMARY
+
+            - name: Upload coverage to Codecov
+              uses: codecov/codecov-action@v4
+              with:
+                  file: ./lcov.info
+                  flags: unittests
+                  name: codecov-umbrella
+                  token: ${{ secrets.CODECOV_TOKEN }}
+                  fail_ci_if_error: true
