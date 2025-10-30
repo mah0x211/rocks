@@ -1,0 +1,18 @@
+{
+    "name": "rocks-test-suite",
+    "description": "Test suite for scripts in the rocks repository",
+    "author": "Masatoshi Fukunaga",
+    "license": "MIT",
+    "engines": {
+        "node": ">=24.0.0"
+    },
+    "type": "module",
+    "scripts": {
+        "test": "node --test test/**/*.test.js",
+        "test:coverage": "node --test --experimental-test-coverage test/**/*.test.js",
+        "test:coverage:lcov": "node --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=lcov.info test/**/*.test.js",
+        "test:coverage:json": "node --test --experimental-test-coverage --test-reporter=json --test-reporter-destination=coverage.json test/**/*.test.js",
+        "test:coverage:codecov": "node --test --experimental-test-coverage --test-reporter=lcov --test-reporter-destination=lcov.info test/**/*.test.js",
+        "clean": "rm -f rocks.db test-*.db lcov.info coverage.json && rm -rf test-repo"
+    }
+}
