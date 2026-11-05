@@ -1,0 +1,7 @@
+codefromstrings = false
+runreport = true
+deletestats = true
+modules = {
+    ["rockup.sqlite"] = "lib/rockup/sqlite.lua",
+    ["rockup.db"] = "lib/rockup/db.lua",
+}
