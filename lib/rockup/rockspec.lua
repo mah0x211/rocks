@@ -41,7 +41,45 @@ local function parse_filename(filename)
     return filename:match('^(.*)%-([^%-]+%-%d+)%.rockspec$')
 end
 
+--- Loads rockspec contents in an empty sandbox environment and returns the table
+--- of fields it assigns (package, version, source, ...). The sandbox exposes no
+--- globals, so a rockspec that attempts to call into os/io or any other library
+--- raises instead of executing, and such a rockspec is treated as invalid.
+--- @param content string
+--- @return table|nil spec, string|nil err
+local function load(content)
+    local chunk, err = loadstring(content, 'rockspec')
+    if not chunk then
+        return nil, err
+    end
+    local env = {}
+    setfenv(chunk, env)
+    local ok, run_err = pcall(chunk)
+    if not ok then
+        return nil, run_err
+    end
+    return env
+end
+
+--- Extracts the host, owner, and repository from a GitHub source URL such as
+--- `git+https://github.com/owner/repo.git`. Returns nil for non-GitHub URLs.
+--- @param url string|nil
+--- @return string|nil host, string|nil owner, string|nil repo
+local function parse_source_url(url)
+    if type(url) ~= 'string' then
+        return nil
+    end
+    local owner, repo = url:match('github%.com[/:]([^/]+)/([^/#?]+)')
+    if not owner then
+        return nil
+    end
+    repo = repo:gsub('%.git$', '')
+    return 'github.com', owner, repo
+end
+
 return {
     basename = basename,
     parse_filename = parse_filename,
+    load = load,
+    parse_source_url = parse_source_url,
 }
