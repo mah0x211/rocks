@@ -4,4 +4,16 @@ deletestats = true
 modules = {
     ["rockup.sqlite"] = "lib/rockup/sqlite.lua",
     ["rockup.db"] = "lib/rockup/db.lua",
+    ["rockup.sh"] = "lib/rockup/sh.lua",
+    ["rockup.gh"] = "lib/rockup/gh.lua",
+    ["rockup.gitrepo"] = "lib/rockup/gitrepo.lua",
+    ["rockup.github"] = "lib/rockup/github.lua",
+    ["rockup.rockspec"] = "lib/rockup/rockspec.lua",
+    ["rockup.validation"] = "lib/rockup/validation.lua",
+    ["rockup.crawler"] = "lib/rockup/crawler.lua",
+    ["rockup.schedule"] = "lib/rockup/schedule.lua",
+    ["rockup.registry"] = "lib/rockup/registry.lua",
+    ["rockup.control"] = "lib/rockup/control.lua",
+    ["rockup.sync"] = "lib/rockup/sync.lua",
+    ["rockup.report"] = "lib/rockup/report.lua",
 }
