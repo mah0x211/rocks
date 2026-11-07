@@ -194,6 +194,11 @@ function DB:list_enabled_sources()
     return self.conn:all('SELECT * FROM sources WHERE enabled = 1 ORDER BY host, owner')
 end
 
+--- @return table[]
+function DB:list_sources()
+    return self.conn:all('SELECT * FROM sources ORDER BY host, owner')
+end
+
 --- @param enabled boolean
 function DB:set_source_enabled(host, owner, enabled)
     self.conn:run([[
@@ -263,6 +268,11 @@ function DB:list_repos_by_owner(host, owner)
         host = host,
         owner = owner,
     })
+end
+
+--- @return table[]
+function DB:list_ignored_repos()
+    return self.conn:all('SELECT * FROM repos WHERE ignore = 1 ORDER BY host, owner, repo')
 end
 
 --- @param params table {host, owner, repo, ignore}
@@ -349,6 +359,27 @@ function DB:soft_delete_rockspec(params)
         repo = params.repo,
         filename = params.filename,
         deleted_at = deleted_at,
+    })
+    return result.changes
+end
+
+--- Revives soft-deleted grandfathered (managed=0) rockspecs for a repository, so
+--- re-including a previously excluded repository restores the published versions
+--- that have no counterpart in its current tree.
+--- @param host string
+--- @param owner string
+--- @param repo string
+--- @return integer rows changed
+function DB:revive_grandfathered(host, owner, repo)
+    local result = self.conn:run([[
+        UPDATE rockspecs SET deleted_at = NULL, updated_at = $at
+        WHERE host = $host AND owner = $owner AND repo = $repo
+          AND managed = 0 AND deleted_at IS NOT NULL
+    ]], {
+        host = host,
+        owner = owner,
+        repo = repo,
+        at = now_iso(),
     })
     return result.changes
 end
