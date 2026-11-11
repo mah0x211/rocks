@@ -8,7 +8,7 @@ description = {
     summary = "simple regular expression module for lua",
     homepage = "https://github.com/mah0x211/lua-regex",
     license = "MIT/X11",
-    maintainer = "Masatoshi Teruya"
+    maintainer = "Masatoshi Fukunaga"
 }
 dependencies = {
     "lua >= 5.1",

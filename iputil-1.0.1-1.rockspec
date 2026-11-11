@@ -1,7 +1,7 @@
 package = "iputil"
 version = "1.0.1-1"
 source = {
-    url = "git+https://github.com/mah0x211/lua-iputil.git",
+    url = "git://github.com/mah0x211/lua-iputil.git",
     tag = "v1.0.1"
 }
 description = {

@@ -1,7 +1,7 @@
 package = "coevent"
 version = "scm-1"
 source = {
-    url = "git+https://github.com/mah0x211/lua-coevent.git"
+    url = "git://github.com/mah0x211/lua-coevent.git"
 }
 description = {
     summary = "kqueue/epoll event module",
@@ -11,12 +11,14 @@ description = {
 }
 dependencies = {
     "lua >= 5.1",
-    "reco >= 1.3.0",
-    "sentry >= 0.1.0",
+    "bitvec >= 1.2.0",
+    "sentry >= 0.4.1",
 }
 build = {
     type = "builtin",
     modules = {
-        coevent = "coevent.lua"
+        coevent = "coevent.lua",
+        ['coevent.runq'] = "lib/runq.lua",
+        ['coevent.thread'] = "lib/thread.lua"
     }
 }
