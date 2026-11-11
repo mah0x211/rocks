@@ -1,0 +1,116 @@
+name: sync
+
+on:
+    schedule:
+        - cron: "0 */6 * * *"
+    workflow_dispatch:
+        inputs:
+            command:
+                description: "rockup command"
+                type: choice
+                default: sync
+                options:
+                    - sync
+                    - pause
+                    - resume
+                    - exclude
+                    - include
+                    - scan
+                    - add-source
+                    - enable-source
+                    - disable-source
+                    - seed
+                    - state
+            targets:
+                description: "space-separated owner/repo (or owner) arguments"
+                type: string
+                default: ""
+            force:
+                description: "bypass the keep-alive gate for sync"
+                type: boolean
+                default: false
+
+# Serialize every run so concurrent jobs never race on rocks.db or the branches.
+concurrency:
+    group: rockup-sync
+    cancel-in-progress: false
+
+permissions:
+    contents: write
+
+jobs:
+    sync:
+        runs-on: ubuntu-latest
+        container:
+            image: ghcr.io/mah0x211/lua-ci:latest
+        steps:
+            - name: Switch to LuaJIT
+              run: lenv -g use lj-v2.1
+
+            - name: Install gh
+              run: |
+                  if ! command -v gh >/dev/null 2>&1; then
+                      curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg \
+                          | tee /usr/share/keyrings/githubcli-archive-keyring.gpg >/dev/null
+                      chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+                      echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" \
+                          > /etc/apt/sources.list.d/github-cli.list
+                      apt-get update && apt-get install -y gh
+                  fi
+
+            - name: Checkout master
+              uses: actions/checkout@v4
+              with:
+                  ref: master
+                  fetch-depth: 0
+
+            - name: Authenticate git for fetches
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: gh auth setup-git
+
+            - name: Prepare gh-pages worktree
+              run: |
+                  git config --global --add safe.directory "$GITHUB_WORKSPACE"
+                  git config user.name "github-actions[bot]"
+                  git config user.email "github-actions[bot]@users.noreply.github.com"
+                  git fetch origin gh-pages
+                  git worktree add serve origin/gh-pages
+
+            - name: Run rockup
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GH_NO_UPDATE_NOTIFIER: "1"
+                  GH_PROMPT_DISABLED: "1"
+                  COMMAND: ${{ github.event.inputs.command || 'sync' }}
+                  TARGETS: ${{ github.event.inputs.targets }}
+                  FORCE: ${{ github.event.inputs.force }}
+              run: |
+                  export LUA_PATH="./lib/?.lua;./lib/?/init.lua;${LUA_PATH}"
+                  set -- "$COMMAND"
+                  if [ -n "$TARGETS" ]; then
+                      # shellcheck disable=SC2086
+                      set -- "$@" $TARGETS
+                  fi
+                  if [ "$FORCE" = "true" ]; then
+                      set -- "$@" --force
+                  fi
+                  lua bin/rockup.lua "$@" --db rocks.db --serve-dir serve
+
+            - name: Publish gh-pages
+              run: |
+                  cd serve
+                  git add -A
+                  if ! git diff --cached --quiet; then
+                      git commit -m "chore(rockup): publish registry"
+                      git push origin HEAD:gh-pages
+                  fi
+
+            - name: Persist rocks.db
+              run: |
+                  git add rocks.db
+                  if ! git diff --cached --quiet; then
+                      git commit -m "chore(rockup): update rocks.db"
+                      git push origin HEAD:master
+                  fi

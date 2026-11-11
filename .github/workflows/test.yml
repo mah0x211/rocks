@@ -1,0 +1,59 @@
+name: test
+
+on:
+    push:
+        branches-ignore:
+            - gh-pages
+        paths-ignore:
+            - "**.md"
+            - "LICENSE"
+    pull_request:
+        branches-ignore:
+            - gh-pages
+        paths-ignore:
+            - "**.md"
+            - "LICENSE"
+
+jobs:
+    luacheck:
+        runs-on: ubuntu-latest
+        container:
+            image: ghcr.io/mah0x211/lua-ci:latest
+        steps:
+            - name: Switch to LuaJIT
+              run: lenv -g use lj-v2.1
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Install luacheck
+              run: luarocks install luacheck
+            - name: Run luacheck
+              run: luacheck lib test
+
+    test:
+        needs: luacheck
+        permissions:
+            id-token: write
+        runs-on: ubuntu-latest
+        container:
+            image: ghcr.io/mah0x211/lua-ci:latest
+        steps:
+            - name: Switch to LuaJIT
+              run: lenv -g use lj-v2.1
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Install test tools
+              run: |
+                  luarocks install testcase
+                  luarocks install assert
+                  luarocks install luacov
+            - name: Run tests with coverage
+              run: |
+                  export LUA_PATH="./lib/?.lua;./lib/?/init.lua;${LUA_PATH}"
+                  testcase --coverage ./test/
+            - name: Upload coverage to Codecov
+              uses: codecov/codecov-action@v5
+              with:
+                  use_oidc: true
+                  disable_search: true
+                  files: ./luacov.report.out
+                  flags: unittests
