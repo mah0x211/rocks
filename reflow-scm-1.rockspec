@@ -25,6 +25,7 @@ test_dependencies = {
     "luacov >= 0.15.0",
     "memlimit >= 0.1.1",
     "newstate >= 0.3.1",
+    "lua-cjson >= 2.1.0",
 }
 build = {
     type = "hooks",
