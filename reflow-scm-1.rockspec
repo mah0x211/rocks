@@ -40,8 +40,28 @@ build = {
         reflow = "lua/reflow.lua",
         ["reflow.error"] = "lua/error.lua",
         ["reflow.selector_cache"] = "lua/selector_cache.lua",
+        ["reflow.arena"] = {
+            sources = {
+                "src/arena.c",
+                "src/arena_lua.c",
+            },
+            incdirs = {
+                "src",
+            },
+        },
+        ["reflow.slab"] = {
+            sources = {
+                "src/arena.c",
+                "src/slab.c",
+                "src/slab_lua.c",
+            },
+            incdirs = {
+                "src",
+            },
+        },
         ["reflow.pool"] = {
             sources = {
+                "src/arena.c",
                 "src/pool.c",
                 "src/pool_lua.c",
             },
@@ -56,6 +76,7 @@ build = {
                 "src/reflow_util.c",
                 "src/expr_eval.c",
                 "src/js_number.c",
+                "src/arena.c",
                 "src/pool.c",
                 "src/render_output.c",
                 "src/scope.c",
@@ -71,6 +92,7 @@ build = {
                 "src/selector_lua.c",
                 "src/selector_compile.c",
                 "src/selector_exec.c",
+                "src/arena.c",
                 "src/pool.c",
                 "src/reflow_util.c",
             },
@@ -85,6 +107,7 @@ build = {
                 "src/html_lexbor.c",
                 "src/ir.c",
                 "src/ir_lua.c",
+                "src/arena.c",
                 "src/pool.c",
                 "src/reflow_util.c",
                 "src/directive_parse.c",
