@@ -16,7 +16,20 @@ dependencies = {
 build = {
     type = "builtin",
     modules = {
-        ["lexogram"] = "lua/lexogram.lua",
-        ["lexogram.compat"] = "lua/lexogram/compat.lua",
+        ["lexogram"] = "lib/lexogram.lua",
+        ["lexogram.check"] = "lib/check.lua",
+        ["lexogram.compat"] = "lib/compat.lua",
+        ["lexogram.compile"] = "lib/compile.lua",
+        ["lexogram.compile.delimited"] = "lib/compile/delimited.lua",
+        ["lexogram.compile.dfa"] = "lib/compile/dfa.lua",
+        ["lexogram.compile.lexer"] = "lib/compile/lexer.lua",
+        ["lexogram.compile.limits"] = "lib/compile/limits.lua",
+        ["lexogram.compile.nfa"] = "lib/compile/nfa.lua",
+        ["lexogram.compile.utf8range"] = "lib/compile/utf8range.lua",
+        ["lexogram.loader"] = "lib/loader.lua",
+        ["lexogram.pattern"] = "lib/pattern.lua",
+        ["lexogram.text"] = "lib/text.lua",
+        ["lexogram.utf8"] = "lib/utf8.lua",
+        ["lexogram.version"] = "lib/version.lua",
     },
 }
