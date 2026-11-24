@@ -30,6 +30,7 @@ build = {
         ["lexogram.compile.ll"] = "lib/compile/ll.lua",
         ["lexogram.compile.lookahead"] = "lib/compile/lookahead.lua",
         ["lexogram.compile.nfa"] = "lib/compile/nfa.lua",
+        ["lexogram.compile.prefix"] = "lib/compile/prefix.lua",
         ["lexogram.compile.syntax"] = "lib/compile/syntax.lua",
         ["lexogram.compile.utf8range"] = "lib/compile/utf8range.lua",
         ["lexogram.dump"] = "lib/dump.lua",
